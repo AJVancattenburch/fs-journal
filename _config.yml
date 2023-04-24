@@ -1,0 +1,11 @@
+theme: minima
+title: CodeWorks Journal
+tagline: Learn to Code. Develop your future!
+description: My notes and reflections while learning to code
+author: CodeWorks
+logo: /assets/img/codeworks.png
+header_pages:
+  - journals.md
+  - notes.md
+plugins:
+  - jekyll-seo-tag

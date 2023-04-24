@@ -1,0 +1,110 @@
+.active-nav {
+  border-bottom: 2px solid var(--bs-success);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+article {
+  max-width: min(100%, 100ch);
+}
+
+ul {
+  list-style: none;
+  padding: 1.2rem;
+}
+
+article img {
+  display: inline-block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 5px;
+  margin: 0 1rem;
+  max-width: min(500px, 60%);
+}
+
+article img:only-child {
+  display: block !important;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 5px;
+  margin: 3rem auto;
+  max-width: min(500px, 60%);
+}
+
+article ul li {
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+article a {
+  padding: 0 0.15rem;
+  color: var(--bs-dark);
+  border-bottom: 2px solid var(--bs-primary);
+  transition: all 0.15s linear;
+  position: relative;
+}
+
+article a:after {
+  border-radius: inherit;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  bottom: 0;
+  color: inherit;
+  content: "";
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+  background-color: currentColor;
+}
+
+article li a {
+  border-bottom: none;
+}
+article li input {
+  margin-right: 0.5rem;
+}
+
+article a:hover::after {
+  opacity: 0.1;
+}
+
+article blockquote {
+  border-left: 6px solid var(--bs-primary);
+  background: #dfdff650;
+  padding: 0.5rem 2rem;
+  font-size: 14pt;
+}
+article blockquote p {
+  margin: 0;
+}
+
+article table {
+  font-size: 16px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border-color: #dee2e6;
+}
+
+article table th {
+  padding: 0.75rem;
+  background-color: var(--bs-dark);
+  color: white;
+}
+
+article table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+article table td {
+  padding: 0.75rem;
+}
