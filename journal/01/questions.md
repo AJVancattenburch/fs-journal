@@ -13,7 +13,7 @@
     > | Many will also have other elements with this pseudo class like; for instance, hovering over a *link* and/or *icon.* |
 
 04. What is ***specificity*** and how might you use it to your benefit?
-    > | It is viewed as the **"importance" of an element's class** by specifying a number value for said class of that element. If i remember correctly, ID's have a specificity of 100, classes are 10, and calling a literal tag "<></>" has a specificity of 1. |
+    > | It is viewed as the **"importance" of an element's class** by specifying a number value for said class of that element. If i remember correctly, ID's have a specificity of 100, classes are 10, and calling a literal tag "<></>" has a specificity of 1;
     <br>
     > | Whichever overruling class in specificity value will take priority on the class properties that are used to style that element. |
 
