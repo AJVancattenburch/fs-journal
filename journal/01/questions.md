@@ -32,8 +32,8 @@
 
 07. How do you think good design influences people when visiting a website, and what sorts of things could you convey through design alone?
     > | Smoothly styled transitions, quick load times, appropriately chosen color scheme usage, properly placed animation sequences, etc. are the cornerstone of keeping someone on your site and interested. |
-    
-    > |**ALL** of these concepts can be achieved from design alone, and can make or break a successful website. Even down to the colors you use to convey your companies message effect this and must be carefully considered when designing anything in software development for the utmost success rate. |
+
+    > | **ALL** of these concepts can be achieved from design alone, and can make or break a successful website. Even down to the colors you use to convey your companies message effect this and must be carefully considered when designing anything in software development for the utmost success rate. |
 
 08. What is the purpose of ***wireframing***?
     > | For creating a "visual blueprint" of sorts. A program used for designating an outline of the page you're building while creating a project page with code in another program. |
@@ -44,13 +44,13 @@
 10. Define the display `:flex property:`
     > | "Flex" is what is used to place objects where you want on your page. Examples include the following with descriptions of their actions:
     <br>
-    **flex-start:** flexes object to the left;
+    > | **flex-start:** flexes object to the left;
     <br>
-    **flex-end:** flexes object to the right;
+    > | **flex-end:** flexes object to the right;
     <br>
-    **flex-column:** flexes objects downward in the same column;
+    > | **flex-column:** flexes objects downward in the same column;
     <br>
-    These are just a few of the many examples of a flex property. |
+    > | These are just a few of the many examples of a flex property. |
 
 11. What `CSS` properties affect the size of a box model?
     > | Properties like **border-box, content-box, height, width** can all effect the size of the box model.  |
