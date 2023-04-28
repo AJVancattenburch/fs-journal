@@ -32,7 +32,7 @@
   <li> <b>Unplash</b> is a large collection of open-source photos for mock-up images for your page. </li>
   <li> Don't be afraid to rename your components for ease of navigation as your project gets more complex.</li>
   <li> To get back from your <i>prototype</i> to your <i>file,</i> all you need to do is replace <b>prototype</b> with <b>file</b> in your URL link.</li>
-  <li>  </li>
+  <li> If you're targeting an image. Use the "object" positioning. </li>
   <li>  </li>
   <li>  </li>
   <li>  </li>

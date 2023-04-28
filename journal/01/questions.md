@@ -36,10 +36,10 @@
     **ALL** of these concepts can be achieved from design alone, and can make or break a successful website. Even down to the colors you use to convey your companies message effect this and must be carefully considered when designing anything in software development for the utmost success rate. |
 
 08. What is the purpose of ***wireframing***?
-    > | It is for designating an outline around the grid that you build while creating a project page. |
+    > | For creating a "visual blueprint" of sorts. A program used for designating an outline of the page you're building while creating a project page with code in another program. |
 
 09. Do you think wireframes are worth the time, energy, and effort that they require? Why or Why not?
-    > | Absolutely. I feel they are essential for keeping track of the layout you are building while simultaneously helping you catch any errors in your code while you are placing objects into your project. |
+    > | **Absolutely.** I feel they are essential for keeping track of the layout you are building while simultaneously being an essential aide for project presentation before it is engineered. |
 
 10. Define the display `:flex property:`
     > | "Flex" is what is used to place objects where you want on your page. Examples include the following with descriptions of their actions:
