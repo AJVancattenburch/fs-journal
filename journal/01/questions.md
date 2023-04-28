@@ -44,11 +44,11 @@
 10. Define the display `:flex property:`
     > | "Flex" is what is used to place objects where you want on your page. Examples include the following with descriptions of their actions:
     <br>
-    > | **flex-start:** flexes object to the left;
+    > | **flex-start:** flexes object to the left; |
     <br>
-    > | **flex-end:** flexes object to the right;
+    > | **flex-end:** flexes object to the right; |
     <br>
-    > | **flex-column:** flexes objects downward in the same column;
+    > | **flex-column:** flexes objects downward in the same column; |
     <br>
     > | These are just a few of the many examples of a flex property. |
 
