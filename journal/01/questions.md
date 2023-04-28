@@ -8,7 +8,7 @@
 03. What is a ***pseudo-class*** and what are some of the most common ones you think you will use?
     > | A pseudo class is essentially a "class within a class" that **styles an existing one** (e.g. :hover, :active, :disabled, etc.).
     <br>
-    i Foresee that we will most commonly be using the ?**":hover"** pseudo class; as it is activated consistently while browsing a webpage.  An example would include literally any time you are *hovering* over a *button* on most websites.  
+    I foresee that we will most commonly be using the ?**":hover"** pseudo class; as it is activated consistently while browsing a webpage.  An example would include literally any time you are *hovering* over a *button* on most websites.  
     <br>
     Many will also have other elements with this pseudo class like; for instance, hovering over a *link* and/or *icon.* |
 
