@@ -43,14 +43,14 @@
 
 10. Define the display `:flex property:`
     > | "Flex" is what is used to place objects where you want on your page. Examples include the following with descriptions of their actions:
-    <br>
-    > | **flex-start:** flexes object to the left; |
-    <br>
-    > | **flex-end:** flexes object to the right; |
-    <br>
-    > | **flex-column:** flexes objects downward in the same column; |
-    <br>
-    > | These are just a few of the many examples of a flex property. |
+    
+    > | **flex-start:** flexes object to the left;
+    
+    > | **flex-end:** flexes object to the right;
+    
+    > | **flex-column:** flexes objects downward in the same column;
+    
+    These are just a few of the many examples of a flex property. |
 
 11. What `CSS` properties affect the size of a box model?
     > | Properties like **border-box, content-box, height, width** can all effect the size of the box model.  |
