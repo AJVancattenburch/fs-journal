@@ -33,7 +33,7 @@
 07. How do you think good design influences people when visiting a website, and what sorts of things could you convey through design alone?
     > | Smoothly styled transitions, quick load times, appropriately chosen color scheme usage, properly placed animation sequences, etc. are the cornerstone of keeping someone on your site and interested. |
     <br>
-    | **ALL** of these concepts can be achieved from design alone, and can make or break a successful website. Even down to the colors you use to convey your companies message effect this and must be carefully considered when designing anything in software development for the utmost success rate. |
+    > |**ALL** of these concepts can be achieved from design alone, and can make or break a successful website. Even down to the colors you use to convey your companies message effect this and must be carefully considered when designing anything in software development for the utmost success rate. |
 
 08. What is the purpose of ***wireframing***?
     > | For creating a "visual blueprint" of sorts. A program used for designating an outline of the page you're building while creating a project page with code in another program. |
