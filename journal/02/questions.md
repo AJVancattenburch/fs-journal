@@ -1,11 +1,11 @@
 # Intro to JavaScript
 01. Which keywords are used to declare a variable in JavaScript?
 
-    > | ANSWER HERE |
+    > | Keywords <b>const, let, and var.</b> Keywords <b>var</b> and <b>let</b> have values that can be changed while <b>const</b> has a value that cannot be changed. |
 
 02. What is the definition of a function?
 
-    > | ANSWER HERE |
+    > | An action performed that is designed to execute a task. |
 
 03. What are the `SOLID` principles?
 
