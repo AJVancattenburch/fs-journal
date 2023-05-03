@@ -1,7 +1,7 @@
 # JavaScript
 
 
-<h2>Datatypes</h2>
+<h2><b>Day 1:</b> Datatypes</h2>
 
 <br>
 
@@ -46,6 +46,15 @@
   <li>
     <b>Label console.log( ) by using</b> <i></i>
   </li>
+
+
+  <br><br>
+
+
+  <h2><b>Day 2:</b> Loops, Arrays, Filters, Dynamically Updating DOM</h2>
+
+  <br>
+  
   <li>
     <b></b> <i></i>
   </li>
