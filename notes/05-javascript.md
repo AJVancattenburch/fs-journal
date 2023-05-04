@@ -56,22 +56,27 @@
   <br>
   
   <li>
-    <b></b> <i></i>
+    Do not call/invoke a function within <b>"setInterval"</b> as it will create an <i>endless loop.</i>
   </li>
   <li>
-    <b></b> <i></i>
+    The <b>||</b> or <b>"pipes"</b> are placed between comparing arguments to symbolize  <i>"or".</i>
   </li>
   <li>
-    <b></b> <i></i>
+    The <b>&&</b> keys are placed between comparing arguments to symbolize  <i>"and".</i>
   </li>
   <li>
-    <b></b> <i></i>
+    <b>Switches</b> or <i>switch(argument)</i> must always be followed by a <b>case:</b> to follow thereafter.
+
+    (e.g. switch(animal.mood) being followed by the case of their mood, then creating a changing variable of "income" each time the animal mood changes.  After the case is established, each case is written as "if/else" statements and separated by another "case" and "break" and the final "case" is separated by a "default".)
   </li>
   <li>
-    <b></b> <i></i>
+    <b>Marquee</b> is a tag that creates a literal marquee that can <i>scroll text and objects around the screen.</i>
   </li>
+
+  <br>
+
   <li>
-    <b></b> <i></i>
+    Changing the <b>behavior,</b> <b>direction,</b> and <b>scroll-amount</b> properties change the <i>marquee's animation properties.</i>
   </li>
   
 </ul>

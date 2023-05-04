@@ -18,8 +18,13 @@
   <li> For the <b>box-sizing</b> properties, you typically need them to help with margins between box spacing by using <b>border-box</b> and <b>content-box.</b> </li>
   <li> The <b>article</b> tag is typically the parent tag for a <b>paragraph</b> element, or another similar document type.</li>
   <li> You can set how many <b>"Lorem"</b> characters are typed by immediately following Lorem with a <b>number value.</b> </li>
-  <li>  </li>
-  <li>  </li>
+  <li>
+    The <b>"offset"</b> tool helps to offset a <i>column</i> by however many you choose.
+    
+    (e.g. col-11 gets offset-1, col-10 gets offset-2, etc.)
+  </li>
+  
+
   <li>  </li>
   <li>  </li>
   <li>  </li>
