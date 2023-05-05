@@ -21,7 +21,6 @@
         for (pineapple in fruit) {
             !pineapple = pineapple
         }
-        
         ``` |
 
 05. Given these two objects: How could you add each to the others friends arrays?
