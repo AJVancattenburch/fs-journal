@@ -17,7 +17,12 @@
     let fruit = ['apple', 'banana', 'pineapple', 'orange', 'strawberry']
     ```
 
-    > | ANSWER HERE |
+    > | ```
+        for (pineapple in fruit) {
+            !pineapple = pineapple
+        }
+        
+        ``` |
 
 05. Given these two objects: How could you add each to the others friends arrays?
 
@@ -34,24 +39,29 @@
     }
     ```
 
-    > | ANSWER HERE |
+    > | A forEach statement? I am not sure on this one. |
 
 06. Give an example of a JavaScript `Conditional`:
 
-    > | ANSWER HERE |
+    > | It is what is inside of the first part of an "if" or "for" statement that is the main focus of what you are trying to argue. |
 
 07. What is the main difference between `parameters` and `arguments`?
 
-    > | ANSWER HERE |
+    > | Parameters are the condition for what a function is to execute and arguments create the rules inside of a function for the parameter to follow. |
 
 08. Instead of writing everything to the console, what is a better way to debug your code?
 
-    > | ANSWER HERE |
+    > | Using the "debugger" tool in vsCode by typing "debugger". |
 
 09. What is the difference between a `primitive` value and a `reference` value?
 
-    > | ANSWER HERE |
+    > | I am not sure. |
 
 10. Demonstrate a loop that prints the numbers between -100 and 100?
 
-    > | ANSWER HERE |
+    > | ```
+        for (let i=-100; i <=100; i++) {
+        console.log(i)
+        }
+        ```
+     |
