@@ -51,7 +51,23 @@
   </li>
 
   <br>
-    </li>
+
+  <li>
+    It is <b>never</b> the job of the <b>controller to modify data. It is highly unrecommended.</b> <i></i>
+  </li>
+
+  <li>
+    The <b>singleton pattern</b> means that there is <i>only one</i> heroes service.
+  </li>
+
+  <li>
+    The <b>appstate.emit('string')</b> works like a forEach in combination with an addEventListener() when you need to find the properties of all <i>'string'</i> objects in an array.
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
   <li>
     <b></b> <i></i>
   </li>
