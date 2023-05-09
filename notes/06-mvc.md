@@ -2,6 +2,8 @@
 
 <h1><u>Model View Controller</u></h1>
 
+## <b><u>DAY 1</u></b>
+
 ## Figma Visual Explanation
 
 
@@ -62,6 +64,114 @@
 
   <li>
     The <b>appstate.emit('string')</b> works like a forEach in combination with an addEventListener() when you need to find the properties of all <i>'string'</i> objects in an array.
+  </li>
+<br>
+
+## <b><u>DAY 2</u></b>
+
+
+  <li>
+    There is <b>no need to make files and folders for each project while using MVC opened with the bcw create command in the command prompt.</b> Just go  <i></i>
+  </li>
+
+  <li>
+    <b>ALWAYS start at the model at the beginning of an MVC project.</b> It is the foundation of the way you're <i>application will look as a "model".</i>
+  </li>
+
+  <li>
+    The name of your file should <b>match the name of your class</b> that you are <i>creating in your file.</i>
+  </li>
+
+  <li>
+    If you are going to pull references into other files elsewhere in your project,  <b>make sure you add an "export file"</b> before <i>defining it.</i>
+  </li>
+
+  <li>
+    Creating attributes for an object in your model is similar to <b>creating a class</b> in <i>CSS.</i>
+  </li>
+
+  <li>
+    Any time you want to build or instantiate a class, you're creating a <b>blueprint</b> of what it will look like in the <i>model in your bottom defining curly brackets.</i>
+  </li>
+
+  <li>
+    Inside the parenthesis located after the constructor is where you place curly brackets. <b>Inside those curly brackets further classify</b> what those <i>blueprint attributes would look like.</i>\
+
+<br><br>
+
+
+<h4><b>Example 1:</b></h4>
+
+<br>
+
+```js
+  export class House {
+
+  constructor(walls, floor, windows) {
+    this.walls = walls
+    this.floor = floors
+    this.windows = windows
+    this.crownMolding = true
+    this.lightbulbs = 0
+  }
+  }
+
+  new House({walls: 'plywood', floors: 'tile', windows: 'glass'})
+
+  new House({walls: 'sheetrock', floors: 'wood', windows: 'stained glass'})
+```
+
+<br><br>
+
+
+<h4><b>Example 2:</b></h4>
+
+<br>
+
+```js
+  export class Gachamon {
+
+  constructor(name, emoji, rarity, skin) {
+    this.name = walls
+    this.emoji = floors
+    this.rarity = windows
+    this.skin = true
+  }
+  }
+
+  new House({walls: 'plywood', floors: 'tile', windows: 'glass'})
+
+  new House({walls: 'sheetrock', floors: 'wood', windows: 'stained glass'})
+```
+
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
   </li>
 
   <li>
