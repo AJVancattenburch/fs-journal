@@ -132,9 +132,9 @@ constructor(walls, floor, windows) {
 export class Gachamon {
 
 constructor(name, emoji, rarity, skin) {
-  this.name = walls
-  this.emoji = floors
-  this.rarity = windows
+  this.name = gachamon.name
+  this.emoji = gachamon.emoji
+  this.rarity = gachamon.rarity
   this.skin = ''
 }
 }
@@ -143,6 +143,8 @@ constructor(name, emoji, rarity, skin) {
 
   new House({walls: 'sheetrock', floors: 'wood', windows: 'stained glass'})
 ```
+
+<br><br>
 
   </li>
 
@@ -158,7 +160,7 @@ constructor(name, emoji, rarity, skin) {
 
 ```js
 gachamon = [
-  new Gachamon ({name emoji rarity})
+  new Gachamon ({name: gachamon.name, emoji: gachamon.emoji,  rarity: gachamon.rarity})
 ]
 ```
 
@@ -224,7 +226,7 @@ function _drawGachemon() {
 ```
 
   <li>
-    Private functions are being written in the controller, they get an <b>underscore between the word "function" and the name it is given,</b> like in the example above. <i></i>
+    "Private" functions are being written in the controller, they get an <b>underscore between the word "function" and the name it is given,</b> like in the example above. <i></i>
   </li>
 
   <li>
@@ -232,7 +234,7 @@ function _drawGachemon() {
   </li>
 
   <li>
-    <b></b> <i></i>
+    Clicking on a piece of code then using the hotkey <b>Ctrl + .</b> will copy/paste that code into another selected layer of the <i>MVC.</i>
   </li>
 
   <li>
