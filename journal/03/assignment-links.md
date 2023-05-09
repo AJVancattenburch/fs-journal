@@ -1,6 +1,6 @@
 ## Afternoon Assignment Links
 
-* **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
+* **[gameNight](https://github.com/AJVancattenburch/gameNight)**
 * **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
 * **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
 * **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
