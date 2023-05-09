@@ -105,16 +105,16 @@
 <br>
 
 ```js
-  export class House {
+export class House {
 
-  constructor(walls, floor, windows) {
-    this.walls = walls
-    this.floor = floors
-    this.windows = windows
-    this.crownMolding = true
-    this.lightbulbs = 0
-  }
-  }
+constructor(walls, floor, windows) {
+  this.walls = walls
+  this.floor = floors
+  this.windows = windows
+  this.crownMolding = true
+  this.lightbulbs = 0
+}
+}
 
   new House({walls: 'plywood', floors: 'tile', windows: 'glass'})
 
@@ -129,15 +129,15 @@
 <br>
 
 ```js
-  export class Gachamon {
+export class Gachamon {
 
-  constructor(name, emoji, rarity, skin) {
-    this.name = walls
-    this.emoji = floors
-    this.rarity = windows
-    this.skin = true
-  }
-  }
+constructor(name, emoji, rarity, skin) {
+  this.name = walls
+  this.emoji = floors
+  this.rarity = windows
+  this.skin = true
+}
+}
 
   new House({walls: 'plywood', floors: 'tile', windows: 'glass'})
 
