@@ -164,6 +164,8 @@ gachamon = [
 ]
 ```
 
+<br>
+
   <li>
     To handle <b>default values,</b> we use symbols like <b>''</b> or <b>||</b> <i></i>
   </li>
