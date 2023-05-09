@@ -240,11 +240,18 @@ function _drawGachemon() {
   </li>
 
   <li>
-    <b></b> <i></i>
+    Use the <b>appState.on</b> method when you want to <i>change anything that is not being shown to the user by grabbing those appState.on values from the controller layer.</i>
   </li>
 
   <li>
-    <b></b> <i></i>
+    Typically move about a new user interactive element's addition in this order on MVC if you aren't creating your already working on a project: <b>controller, service, appState; controller, appState (for initial console.log);
+    <br>
+    index.html, controller, service, appState (to further add functionality to first console.log);
+    <br>
+    controller again to pull values from appState(to draw in console.log what you want to appear later on screen);
+    <br>
+    controller, 
+     </br> <i></i>
   </li>
 
   <li>
