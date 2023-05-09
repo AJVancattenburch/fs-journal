@@ -95,7 +95,7 @@
   </li>
 
   <li>
-    Inside the parenthesis located after the constructor is where you place curly brackets. <b>Inside those curly brackets further classify</b> what those <i>blueprint attributes would look like.</i>\
+    Inside the parenthesis located after the constructor is where you place curly brackets. <b>Inside those curly brackets further classify</b> what those <i>blueprint attributes would look like.</i>
 
 <br><br>
 
@@ -135,7 +135,7 @@ constructor(name, emoji, rarity, skin) {
   this.name = walls
   this.emoji = floors
   this.rarity = windows
-  this.skin = true
+  this.skin = ''
 }
 }
 
@@ -147,7 +147,88 @@ constructor(name, emoji, rarity, skin) {
   </li>
 
   <li>
-    <b></b> <i></i>
+    After we are done defining what the class will look like in the <b>model</b>, we <b>go to the AppState to store them, and then define their properties and values.</b>
+    <br>
+    It is the <i>window</i> between your HTML (the user) and the rest of your JavaScript.
+  </li>
+
+<h4><b>Example 2:</b></h4>
+
+<br>
+
+```js
+gachamon = [
+  new Gachamon ({name emoji rarity})
+]
+```
+
+  <li>
+    To handle <b>default values,</b> we use symbols like <b>''</b> or <b>||</b> <i></i>
+  </li>
+
+  <li>
+    Whenever we want to change, alter or manipulate the stored data in the AppState, we move to the <b>Service</b> layer in MVC. <i></i>
+  </li>
+
+  <li>
+    The first thing we do in service is <b>single instance for a single need in a given class.</b> After that, we move to the <b>controller,</b> which handles inputs.
+    <br>
+    <i>The filter layer between the users and the rest of your application code.</i>
+  </li>
+
+  <li>
+    Anything the user will interact with will be handled from <b>the controller</b> layer. <i></i>
+  </li>
+  <br><br>
+
+  ```js
+export class GachamonController {
+  constructor() {
+    console.log('hello from the gachamon controller')
+  }
+}
+```
+<br><br>
+
+  <li>
+    If you want to draw something form the <b>console to the page,</b> you do so in the <i>index.html</i> and then make your template in your <b>model</b> layer.
+  </li>
+  <br><br>
+
+```js
+getListTemplate( {
+  return `
+  whatever you have as your   html.index template goes here`
+})
+```
+  <li>
+    Any time you want to manipulate or change what the user sees (DOM), <b>that will happen in the controller.</b>
+    <br>
+    (e.g. when you draw something to the page). <i></i>
+  </li>
+
+  <li>
+    When you want your object to be drawn to the console, you do so in the <b>controller</b> layer. <i></i>
+  </li>
+
+  <br><br>
+```js
+function _drawGachemon() {
+  let gachamon = appState.gachamon
+  let template =''
+  template
+  gachamon.forEach(g => template+= g.template)
+  //NOTE - this does the same thing as 'document.getElementById, second argument is the actual HTML//
+  setHTML ('gachamon', template)
+}
+```
+
+  <li>
+    Private functions are being written in the controller, they get an <b>underscore between the word "function" and the name it is given,</b> like in the example above. <i></i>
+  </li>
+
+  <li>
+    <b>Encapsulation</b> is what you hide from the user in your code in an additional layer. We only call them within a method with a single instance. This is to protect the developer application code. <i></i>
   </li>
 
   <li>
@@ -181,7 +262,11 @@ constructor(name, emoji, rarity, skin) {
   <li>
     <b></b> <i></i>
   </li>
+
+  <br><br>
   
+
+
   <br>
 
 </ul>
