@@ -244,7 +244,9 @@ function _drawGachemon() {
   </li>
 
   <li>
-    Typically; to get a new element or object to draw to the user screen, move about a new user interactive element's addition in this order on MVC if you aren't creating your already working on a project: <b>controller, service, appState; controller, appState (for initial console.log);
+    Typically; to get a new element or object to draw to the user screen, move about a new user interactive element's addition in this order on MVC if you aren't creating your already working on a project:
+    <br><br>
+    <b>Controller, service, appState; controller, appState (for initial console.log);
     <br><br>
     index.html, controller, service, appState (to further add functionality to first console.log);
     <br><br>
