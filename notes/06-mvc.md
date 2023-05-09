@@ -265,11 +265,15 @@ function _drawGachemon() {
   </li>
 
   <li>
-    <b></b> <i></i>
+    <b>saveState(banana word, load request)</b> is what saves information like "JSON.stringify()" from the MVC.
+    <br>
+    The first argument is a "banana" word and the second argument is what you want to load from your local storage.<i></i>
   </li>
 
   <li>
-    <b></b> <i></i>
+    <b>loadState(load request, the type you want it changed into)</b> is what loads information like "JSON.parse()" from the MVC.
+    <br>
+    The first argument is the name of the collection that you would like to load, and the second argument is what you want that element to change into. <i></i>
   </li>
 
   <li>
