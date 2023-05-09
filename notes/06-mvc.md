@@ -252,16 +252,16 @@ function _drawGachemon() {
     <br><br>
     controller again to pull values from appState(to draw in console.log what you want to appear later on screen);
     <br><br>
-    controller.
+    controller.</b>
      </br> <i></i>
   </li>
 
   <li>
-    <b></b> <i></i>
+    The <b>setHTML(object, MVC layer location)</b> and <b>setText(object, MVC layer location)</b> methods are the same as using <b>innerHTML</b> or <b>innerText</b> (respectively) as you would writing a simple 3 document HTML, JS, CSS document <b>while writing code in MVC.</b> <i></i>
   </li>
 
   <li>
-    <b></b> <i></i>
+    <b>appState.emit</b> triggers a function that <i>appState.on</i> is calling for.
   </li>
 
   <li>
