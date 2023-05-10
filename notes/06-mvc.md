@@ -323,7 +323,48 @@ function _drawGachemon() {
   }
 ```
 
-<h3><u>APP STATE EXPORTATION</u></h3>
+## <b><u>DAY 2</u></b>
 
+  <li>
+    <b>data-bs-toggle data-bs-target</b> are (sequentially) like an "event" and "target" that you set to the same name as your modal "id".<i></i>
+  </li>
 
-<!-- does col and col-12 have differing attributes to how they effect your page? Some projects I've worked on will scrunch my row down slightly when i use col instead of col-12. But I have not ever noticed col-12 shrinking down. -->
+  <li>
+    Inside the <b>"modal content"</b> is where you can set sizing properties for the chosen modal.<i></i>
+  </li>
+
+  <li>
+     Inside the <b>"modal dialogue"</b> is what is actually displayed in the modal. <i></i>
+  </li>
+
+  <li>
+    <b>Rows</b> are typically your parent container that you will leave in your index.html when you cut and paste your html template into the controller. <i></i>
+  </li>
+
+  <li>
+    <b>"Static"</b> (rather than get or set) does <i>not</i> "get" or "set" but in the sense that it stays the way it is.  To change something in the "static" you need to set a parameter for it.
+  </li>
+
+  <li>
+    Using the keyword <b>"new"</b> is what is referred to as instantiation. You are instantiating a new value to a pre-existing class. <i></i>
+  </li>
+
+  <li>
+    The <b>value</b> is what a user actually puts into an input. <i></i>
+  </li>
+
+  <li>
+    The <b>name=""</b> attribute in HTML is pulled from the classes "left hand" property argument. <i>(e.g. this.name= and this.price=);</i> "name" and "price" are the values that get pulled from the "name=" attribute.
+  </li>
+
+  <li>
+    In order to clear a form, we use the <b>boostrap.Modal.getOrCreateInstance(#modal).hide()</b> method. <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
