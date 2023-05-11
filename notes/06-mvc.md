@@ -298,11 +298,11 @@ function _drawGachemon() {
   </li>
 
   <li>
-    <b></b> <i></i>
+    The <b>.focus()</b> method is used to direct your cursor to the method or function that is is called in.  <i></i>
   </li>
 
   <li>
-    <b></b> <i></i>
+    The <b>onblur=""</b> event saves your text when you click out of a text area. <i></i>
   </li>
 
   <li>
