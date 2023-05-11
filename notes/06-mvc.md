@@ -275,6 +275,51 @@ function _drawGachemon() {
     <br>
     The first argument is the name of the collection that you would like to load, and the second argument is what you want that element to change into. <i></i>
   </li>
+  <br><br>
+
+## <b><u>DAY 1</u></b>
+
+  <br><br>
+
+  <li>
+    The <b>.slice()</b> method is used to show what you would like to see in your displayed document. <i></i>
+  </li>
+
+  <li>
+    Take the <b>body</b> and turn it into an array of individual words by using <b>.split()</b> method by taking those words and putting them into their own individual array. <i></i>
+  </li>
+
+  <li>
+    The <b>.map()</b> method looks at and "transforms" the entirety of what it is functioned to look at inside of it's parenthesis into whatever you direct it to transform.<i></i>
+  </li>
+
+  <li>
+    The <b>.join()</b> method is used to do the opposite of what <i>.split()</i> does.
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
 
   <li>
     <b></b> <i></i>
