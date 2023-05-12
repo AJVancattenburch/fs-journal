@@ -1,7 +1,7 @@
 # Application Architecture, MVC Design Pattern
 01. What are the Pillars of Object Oriented Programming (`OOP`)?
   
-  > | I do not remember the answer to this question. |
+  > | Abstraction, Encapsulation, Inheritance, and Polymorphism. |
 
 02. How does `export` differ from `export default`?
   
@@ -13,7 +13,7 @@
 
 04. What are some of the benefits of the `Proxy` object that we are using in our structure for applications?
   
-  > | But upon what I was able to gather from what I could watch in the "Advancing with JavaScript" videos, it is a side of MVC we have not discussed that I don't have any sound knowledge on to describe what it does. |
+  > | Security, avoids object duplications. |
 
 05. What the difference between a `class` and an instance of a `class`?
   
