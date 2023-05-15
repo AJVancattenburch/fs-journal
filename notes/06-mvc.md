@@ -1,6 +1,12 @@
 # MVC
 
-<h1><u>Model View Controller</u></h1>
+<h1>
+  <u>
+    Model View Controller
+<br>
+    <b>Week 1</b>
+  </u>
+</h1>
 
 ## <b><u>DAY 1</u></b>
 
@@ -304,6 +310,12 @@ function _drawGachemon() {
   <li>
     The <b>onblur=""</b> event saves your text when you click out of a text area. <i></i>
   </li>
+
+<br>
+<h2><b><u>Week 2</u></b></h2>
+<br>
+<h3><b><u>Day 1</u></b></h3>
+<br>
 
   <li>
     <b></b> <i></i>
