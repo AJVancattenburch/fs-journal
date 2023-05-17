@@ -314,10 +314,168 @@ function _drawGachemon() {
 <br>
 <h2><b><u>Week 2</u></b></h2>
 <br>
-<h3><b><u>Day 1</u></b></h3>
+<h3><b><u>Day 2 - Sandbox APIs</u></b></h3>
 <br>
 
   <li>
+    <b>To find the data sitting in each sandbox API,</b> you add the path to the end of the URL where you obtain the example. (e.g. sondbox.codeworksacademy.com/car) <i></i>
+  </li>
+
+  <li>
+    When you hit the "login" button, it logs you into the sandbox API and gives you a large key.<b></b> <i></i>
+  </li>
+
+  <li>
+    If you paste said key into <b>jwt.io,</b> it will give you information about the key you obtained in the sandbox, which has your login information. <i></i>
+  </li>
+
+  <li>
+    <b>You can then move to codeworksclassroom.auth0?</b> <i></i>
+  </li>
+
+  <li>
+    <b>Select the auth option when creating project in bcw create on the command line.</b> <i></i>
+  </li>
+
+  <li>
+    <b>***<u>STEPS TO TODAYS LAB PROJECT</u>***</b> <i></i>
+  </li>
+
+  <li>
+    New folders in the auth files are <b>env.js (loads environment for application) and router.js () </b> <i></i>
+  </li>
+
+  <li>
+    <b>You can delete the footer in your HTML.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Copy/paste: domain, audience and clientId from your env.js for the value of your sandbox API auth0 settings @ export const baseURL.</b> <i></i>
+  </li>
+
+  <li>
+    <b>change baseURL from the localhost to classroom sandbox URL in the env.js file.</b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b>Click login to get same login screen.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Logging in at this point plugs in your auth0 settings info but you can log in as anyone.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Set account equal to null on appstate with @type parameter.</b> <i></i>
+  </li>
+
+  <br>*********
+
+  <li>
+    <b>router.js has a Path and a Controller.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Tells you which controller to use. Does not say "new controller". Use whichever one aligns with the "href" in your HTML document.</b> <i></i>
+  </li>
+
+  <li>
+    <b>When setting up new "#/yourPath" links, be sure to link them to the proper controller.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Once you get to service, create an async function that connects to your API with the "let res=" function.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Write the same function as an async function under your export class carsController</b> <i></i>
+  </li>
+
+  <li>
+    <b>From service layer, give your API function something to call on in your Model layer by constructing your export class object in that Model layer.</b> <i></i>
+  </li>
+
+  <li>
+    <b>If a property of an object is not required you may have to write a default method in it's function.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Create the "get" template for your API in your Model layer. (e.g. get carCard(){return `template info`})</b> <i></i>
+  </li>
+
+  <li>
+    <b>appstate.object = res.data.map(o => )... under your template.</b> <i></i>
+  </li>
+
+  <li>
+    <b>go into appstate and set object = [] and it's required @param type.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Make a template for that object in your controller layer.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Do this with let template='', then a forEach statement for it being equal to the template, then setting the HTML, and finally going into your constructor and turning the appstate.on on to listen to your object in your template, and setting the setHTML() method as the first method under your constructor. This last step should draw the object to your page.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Be sure to remember to set the "name" and "id" of your HTML tag that is to be set to the same name of the object property (e.g. ${this.id} etc.).</b> <i></i>
+  </li>
+
+  <li>
+    <b>Continue by setting the HTML under the setHTML for your object template so it also appears in your template to the "id" location.  The second argument is where you want it to be placed with the syntax "Object.ObjectForm".</b> <i></i>
+  </li>
+
+  <li>
+    <b>If using a modal, remember to set "data-bs-toggle" to "id of object" and "data-bs-target" to the id name as well, but with a "#" in front of it to signify that it is the "id name". If it's a canvas, the "data-bs-target" location changes from the top of the modal to wherever the offcanvas is going to slide open from.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Make it so the modal or offcanvas only opens on it's respective page by creating a button to open it only in the instance of the page it's located on by creating a button on the page the modal of offcanvas is on specifically. Then set the button to the same ID as the setHTML, and as the location paste the #/pageName that you want it to be in.</b> <i></i>
+  </li>
+
+  <li>
+    <b>After you set that HTML, set another HTML with the same ID under the template in your model where you do not want it to appear.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Set your appstate.on with the argument as the currently logged in account, with the second argument as drawing the button, then pasting that setHTML info into your function for drawing a button.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Set an if statement to appstate.account as the conditional underneath your command to setHTML.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Any time you ever set up an async function, always use the "try catch" method within it first and set the bottom argument as pop.error(error)</b> <i></i>
+  </li>
+
+  <li>
+    <b>When building the form, be sure to await the service.createobject.</b> <i></i>
+  </li>
+
+  <li>
+    <b>Now in service, put the function into the server from your service with the "res" function with const res = await api.post('api/object', formData). Be sure to console.log('banana', res.data)</b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
     <b></b> <i></i>
   </li>
 
@@ -335,6 +493,10 @@ function _drawGachemon() {
 
   <li>
     <b></b> <i></i>
+  </li>
+
+  <li>
+    <b>Auth Token is the users access token.</b> <i></i>
   </li>
 
   <br><br>
