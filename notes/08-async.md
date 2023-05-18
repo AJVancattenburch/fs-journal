@@ -77,8 +77,47 @@
     <b>Use the .put() method to call the api in your service layer to toggle your object</b> <i></i>
   </li>
 
+  <ul>
+    <li>
+      <b>You need to first go to your env.js file to import your Auth0 so you can assign your user login functionality.</b> <i></i>
+    </li>
+    <li>
+      <b>Add your controller to your router. Wrap your controller name in an array e.g. [Controller, Controller, etc...] and get your first controller built</b> <i></i>
+    </li>
+    <li>
+      <b>Access baseURL in your AxiosService.js by pasting the provided URL into your new baseURL.</b> <i></i>
+    </li>
+    <li>
+      <b>Match the same name as a parameter and the parameter you want inside of your new "export const api" info in your AxiosService.js</b> <i></i>
+    </li>
+    <li>
+      <b>Find and source the logged information of the date, explanation, title, and url for image to build inside your model. Copy and paste the information from your logged information into your code. Remove the info that you add into your model from the log info as you go.</b> <i></i>
+    </li>
+    <li>
+      <b>Save the item into your AppState as multiple objects (array) or a single object (null).</b> <i></i>
+    </li>
+    <li>
+      <b>If that object is an image or background, import it in by inserting this method into your first draw function (document.body.style.backgroundImage = (url name)).</b> <i></i>
+    </li>
+    <li>
+      <b>Switch your appstate on to draw your image to your background</b> <i></i>
+    </li>
+    <li>
+      <b>Build out a template in your html to put your other objects in your model on your page and flex them. Set your string interpolated items to the class and id name of their concurrent properties.</b> <i></i>
+    </li>
+    <li>
+      <b>If you want a current date set the HTML tag's type name concurrently. If you want to target it later, give it a name and id that is concurrent to what you will call it as later in the MVC. Give it an onchange of what you will name your function.</b> <i></i>
+    </li>
+    <li>
+      <b>While linking previous element's onchange to update it, set the query of "?object="</b> <i></i>
+    </li>
+    <li>
+      <b></b> <i></i>
+    </li>
+  </ul>
+
   <li>
-    <b></b> <i></i>
+    <b>Always remember to add new controllers from your array into your router.</b> <i></i>
   </li>
 
   <li>
