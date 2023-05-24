@@ -35,9 +35,11 @@
   <li>
     Any time you make a change re-spin your server.
   </li>
+  
+  <br>
 
   <li>
-    <b></b> <i></i>
+    <b></b>
   </li>
 
   <li>
@@ -99,21 +101,29 @@
   <li>
     "~~()" is short for "Math.Floor()"
   </li>
+  
+  <br>
 
   <li>
-    <b></b> <i></i>
+    <b></b>
   </li>
+  
+  <br>
 
   <li>
-    <b></b> <i></i>
+    <b></b>
   </li>
+  
+  <br>
 
   <li>
-    <b></b> <i></i>
+    <b></b>
   </li>
+  
+  <br>
 
   <li>
-    <b></b> <i></i>
+    <b></b>
   </li>
 <p>```js
   async deleteTiger(req, res, next)
@@ -153,9 +163,11 @@
   <li>
     <i>***best reference for data on node.js is from gregslist node project***</i>
   </li>
+  
+  <br>
 
   <li>
-    <b>Queries</b> start with "word?=deeperword" <i></i>
+    <b>Queries</b> start with "word?=deeperword"
   </li>
 
   <li>
@@ -168,45 +180,328 @@
   <li>
     import, paste what is sent to you, use those and set those up like how Sammy did!!!
   </li>
+  </ul>
 
+## <U>DAY 3</U> ##
+
+  <ul>
   <li>
-    <b></b> <i></i>
+    3 Types of data relationships
   </li>
 
   <li>
-    <b></b> <i></i>
+    1 to 1: exists independently of each other
   </li>
 
   <li>
-    <b></b> <i></i>
+    One to Many: one that points to many things
   </li>
 
   <li>
-    <b></b> <i></i>
+    Many to Many: Many things point to many things.
   </li>
 
   <li>
-    <b></b> <i></i>
+    Many to Many relationships need a "middle-man" to handle the synchronizing properties.
   </li>
 
   <li>
-    <b></b> <i></i>
+    <b><h2><u>STEPS</u></h2></b>
   </li>
 
-  <li>
-    <b></b> <i></i>
-  </li>
+  <br>
+  <br>
 
   <li>
-    <b></b> <i></i>
+    <b>INITIALIZE REPOSITORY IN GITHUB</b>
   </li>
+  
+
 
   <li>
-    <b></b> <i></i>
+    <b>RUN "BCW SERVE" IN YOUR CLIENT FOLDER</b>
   </li>
+  
+  <br>
 
   <li>
-    <b></b> <i></i>
+    <b>GRAB ASSIGNMENT VARIABLES AND PUT THEM IN .ENV FILE</b>
   </li>
+  
+  <br>
+
+  <li>
+    <b>START AT YOUR MOST PARENT COLLECTION</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>CREATE SCHEMA FOR SAID UTMOST PARENT COLLECTION WITH OBJECTS NAME (OBJECT.JS FILE)</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>BUILD OUT CREATE FUNCTION IN CONTROLLER AND SERVICE TO GET A SUCCESSFUL LOGGER</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>MAKE NEW COLLECTION FOR YOUR CODE IN POSTMAN</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>SET UP BASEURL IN YOUR VARIABLES</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>MAKE A FOLDER IN YOUR NEW COLLECTION FOR YOUR CREATE FUNCTIONALITY WITH "POST"</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>BRING IN YOUR BASEURL AND API INTO YOUR POST TO CREATE IN POSTMAN</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>POST SCHEMA FOR OBJECT FROM VSCODE TO POSTMAN</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>CREATE WHAT YOU WOULD LIKE IN YOUR POST USING YOUR SCHEMA AS A MODEL IN POSTMAN</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>CREATE MULTIPLE INSTANCES TO POST USING WORKSPACE IN POSTMAN</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>WRITE YOUR GET FUNCTION IN YOUR CONTROLLER</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>ALWAYS SET UP YOUR GET REQUESTS WITH A QUERY (CONST QUERY = REQ.QUERY) AT THE BEGINNING OF YOUR ASYNC FUNCTION IN YOUR CONTROLLER</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>RESPIN IN VS CODE, THEN IN POSTMAN GENERATE YOUR OUTCOME WITH A GET</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>IF YOU GET A 404 AFTER THIS, GO TO THIS.ROUTER IN YOUR CONTROLLER. (LOOK FOR SYNTAX '/:id')</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>ADD IN THE SERVICE LAYER, TO YOUR GETBYID() FUNCTION, IF(!OBJECT) THROW NEW BADREQUEST</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>AT THE END IF YOUR REQ.PARAMS."" - IT NEEDS TO MATCH WHAT YOU ARE BRINGING IN INSIDE OF YOUR THIS.ROUTER</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>CREATE INSIDE OF YOUR NEWLY DEFINED OBJECT, A FOLDER THAT GOES A LAYER DEEPER INTO YOUR INFO WITH A POST REQUEST ON THE NEW ITERATION</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>NO NEED TO WRITE YOUR ID IN YOUR SCHEMA - POSTMAN WILL TAKE CARE OF THAT FOR US</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>WHEN DEFINING THE RELATIONSHIP ID TYPE FOR THE NEXT SCHEMA - ITS THE NEXT OBJECTID TYPE SCHEMA.TYPES.OBJECTID, WITH A REF: 'PREVIOUS OBJECT'</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>INSERT TIMESTAMPS TRUE IN THE ABOUT TO BE MIDDLE-MAN SCHEMA</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>BUILD YOUR VIRTUAL LAYER IN THE BOTTOM OF YOUR SCHEMA</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>INSERT NEW SCHEMA INFO INTO YOUR DBCONTEXT.JS</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>AFTER MAKING THAT NEW CONTROLLER AND SERVICE LAYER, AGAIN COPY/PASTE YOUR SCHEMA MODEL INTO POSTMAN AS A "POST" FOR YOUR CREATE FUNCTION</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>BUILD OUT THAT SCHEMA'S ATTRIBUTES IN POSTMAN</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>TO ADD ANOTHER SCHEMA BASED FROM ANOTHER, GRAB THAT PARENT SCHEMAS ID FOR THE NEW SCHEMAS REFERENCE ID</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>TO GRAB YOUR NEW MODELS, WRITE A GET FUNCTION IN YOUR CONTROLLER.</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>VIRTUALS NOW COME INTO PLAY TO SHOW WHAT THE NEXT RELATED SCHEMA IS FOR</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>REFERENCE THAT WITH A .POPULATE() METHOD ON THE END OF YOUR QUERY GETTER INSIDE YOUR ASYNC FUNCTION WITHIN YOUR CONTROLLER LAYER</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>FOR GRABBING A PARENT'S CHILDREN SCHEMA, .GET('/:OBJECTID/CHILDOBJECT', THIS.GETOBJECTBYID)</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>THE MIDDLE-MAN SCHEMA WILL CONTAIN ONLY THE TWO LINKING ID'S, ALONG WITH A TIMESTAMP AND TWO VIRTUALS FOR EACH SCHEMA REF ID</b>
+  </li>
+
+   <li>
+    <b>WRITE OUT THE SCHEMA IMPORTATION IN YOUR DBCONTEXT.JS</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>IN YOUR MIDDLE-MAN LAYER, ONCE YOUR CLIENT IS SPUN UP GRAB YOUR BEARER TOKEN AFTER BRINGING ALL OF YOUR ENVIRONMENT VARIABLES INTO POSTMAN FROM YOUR .ENV TO YOUR ENV.JS</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>INSERT BEARER TOKEN INTO YOUR AUTHORIZATION SECTION IN POSTMAN</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>TYPE MIDDLE-MAN OBJECT PATH INTO BASEURL "POST" SECTION</b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b>IN YOUR PERTAINING AREA TO DRAW YOUR OBJECT DEFINITION, COPY AND PASTE THE TWO OTHER CORRESPONDING ID'S INTO THEIR CORRESPONDING FIELDS. (FOR EXAMPLE; THE OBJECTID AND ACCOUNTID)</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>IF DESIGNATING THE ACCOUNT, YOU MUST GO INTO YOUR SCHEMA'S ASYNC CREATE FUNCTION, AND AS THE LAST PART OF YOUR CREATE FUNCTION, ADD "OBJECTDATA.ACCOUNTID = REQ.USERINFO.ID"!!!</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b>ADD 2 AWAITS TO POPULATE THE OBJECTID AND THE ACCOUNT ID ENDED WITH THE METHOD ".POPULATE('OBJECTID')"</b>
+  </li>
+
+  <br>
+
+  <li>
+    <b>ONCE SUPPLYING ONE SIDE OF THE RELATIONSHIP, EXPECT TO HAVE TO RETURN THE OTHER SIDE WITH A .POPULATE()</b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
 
 </ul>
