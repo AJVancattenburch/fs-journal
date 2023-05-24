@@ -93,6 +93,119 @@
   </li>
 
   <li>
+    post and puts work with body else they do not.
+  </li>
+
+  <li>
+    "~~()" is short for "Math.Floor()"
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+<p>```js
+  async deleteTiger(req, res, next)
+    try {
+      let tiger = await tigersService.deleteTiger(req, params, burgerId)
+      res.send(tiger) 
+    } catch (error) {
+      next(error)
+    }
+</p>```
+
+
+<br>
+<br>
+
+
+  <li>
+    Make model, then controller/service
+  </li>
+
+  <li>
+    Be sure to select the "start server" option on the top left of vs code.
+  </li>
+
+  <li>
+    post comes in with a bearer token in your network tab and .use will call as the "middleware" grabs the bearer token and userinfo from auth0 to authenticate the user who made the request.
+  </li>
+
+  <li>
+    Variables you need in postman are baseurl (localhost:3000), auth (as a bearer token that you paste into your authorization submenu in postman),   
+  </li>
+
+  <li>
+    Be sure to set files under their parent folders as "inherit"
+  </li>
+
+  <li>
+    <i>***best reference for data on node.js is from gregslist node project***</i>
+  </li>
+
+  <li>
+    <b>Queries</b> start with "word?=deeperword" <i></i>
+  </li>
+
+  <li>
+    Mongoose find method MUST be formatted as an object!
+  </li>
+
+  <li>
+    Use .forbidden() when adding user business logic to your "editObject()" and "deleteObject()" function in your service later.  </li>
+
+  <li>
+    import, paste what is sent to you, use those and set those up like how Sammy did!!!
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
+    <b></b> <i></i>
+  </li>
+
+  <li>
     <b></b> <i></i>
   </li>
 
