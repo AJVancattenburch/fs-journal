@@ -453,6 +453,152 @@
   <li>
     <b>ONCE SUPPLYING ONE SIDE OF THE RELATIONSHIP, EXPECT TO HAVE TO RETURN THE OTHER SIDE WITH A .POPULATE()</b>
   </li>
+  </ul>
+
+  <br>
+
+## <b><u>DAY 4</b></u> ##
+
+  <br>
+
+  <ul>
+  <li>
+    To add a collaborator to a repo: Go to Settings, collaborators and teams, button that says "add people", type github users name, click name, select member.
+  </li>
+  
+  <br>
+
+  <li>
+    Create your object in your model
+  </li>
+
+  <br>
+
+  <li>
+    (enum: property lets you define multiple dimension sizes)
+  </li>
+  
+  <br>
+
+   <li>
+    Timestamp the bottom of each model with a toJSON: {virtuals: true}
+  </li>
+
+  <br>
+
+  <li>
+    If a model is going to exist in mongo it needs a creatorId {type: Schema.Types.ObjectId, required: true, ref: account}
+  </li>
+  
+  <br>
+
+  <li>
+    Remember the value of auth is your BEARER TOKEN in your key params in mongoDB
+  </li>
+
+  <br>
+
+  <li>
+    After "getting" your empty array, pass your .env file information from your server side folder to your env.js file on your client side folder
+  </li>
+  
+  <br>
+
+  <li>
+    Remember to add your userInfo.id method to the top of your createObject function in your server controller!
+  </li>
+  
+  <br>
+
+   <li>
+    After that, populate your createObject in service with await.newObject.populate('id', 'name picture')
+  </li>
+
+  <br>
+
+  <li>
+    Be sure to remember to add your own .env file info to your server folder once you have cloned down a project that you are collaborating on. You do not need to touch your env.js file.
+  </li>
+  
+  <br>
+
+  <li>
+    Also, remember in your terminal in vscode to run npm i in your server folder to update everything you need to spin your server and get all your dependencies directed the way you need them to be
+  </li>
+
+  <br>
+
+  <li>
+    Once on the front-end, remember to <b>START YOUR CLIENT</b> in your debug section of vs code by switching it from spinning your server
+  </li>
+  
+  <br>
+
+  <li>
+    Check ALL CONNECTIONS before you start writing any front-end code
+  </li>
+  
+  <br>
+
+   <li>
+    <h3><b><u>STEPS (breaching back-end to front-end)</u></b></h3>
+  </li>
+
+  <br>
+
+  <li>
+    Start at router.js - examine the already posted values of current controllers that are drawn to the page
+  </li>
+  
+  <br>
+
+  <li>
+    the ""router-view" in your index.html is the primary viewport. You can draw to the page from your router.js by using a method similar to grabbing a document by it's ID name. (e.g. view: routerView)
+  </li>
+
+  <br>
+
+  <li>
+    Comment out auth section
+  </li>
+  
+  <br>
+
+  <li>
+    (Use unsplash website for a large library of HD quality images)
+  </li>
+  
+  <br>
+
+   <li>
+    Make a new view:
+    <br>
+    Create a new "view" and copy/paste your html template into it's pertaining "view" folder, then mount and register your new view into your router.js folder
+  </li>
+
+  <br>
+
+  <li>
+    .unshift() method will insert an object to the BEGINNING of an array of objects
+  </li>
+  
+  <br>
+
+  <li>
+    Remember that the middle-man schema is primarily only used for storing the ID's that are trying to cross-communicate to give us the ability to place properties from one ID type to the Other
+  </li>
+
+  <br>
+
+  <li>
+    <b>To grab an accurate count, after building out your virtual for counting in your schema, be sure to go to the proper service layer and .populate('targetId targetCount') then .sort('watcherCount')</b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
   
   <br>
 
@@ -472,6 +618,162 @@
     <b></b>
   </li>
 
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+   <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+
+  <br>
+
+  <li>
+    <b></b>
+  </li>
+  
   <br>
 
   <li>
