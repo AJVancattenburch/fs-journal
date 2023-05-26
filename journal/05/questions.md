@@ -17,24 +17,24 @@
 
 05. In a/an _______ coding model, when you call a function, it returns only when the action has finished and stops your program for the time the action takes. Likewise in a/an _______ coding model, multiple things are allowed to happen at one time. When you perform an action, your program continues to run.  Fill in the blanks.
 
-  > | ANSWER HERE |
+  > | Synchronous, Asynchronous |
 
 06. What are the three types of data relationships? Provide an example of each.
 
-  > | ANSWER HERE |
+  > | One-to-One, One-to-Many, and Many-to-Many |
 
 07. What is middleware?
 
-  > | ANSWER HERE |
+  > | Software that sits between the operating system and the applications running on it. |
 
 08. The ______ pipeline delivers information from the client while the ______ pipeline returns it. Fill in the blanks. 
 
-  > | ANSWER HERE |
+  > | Client to Server, Server to Client |
 
 09. Demonstrate the pattern that is used to include a request query with the client's `HTTP` request providing the property `tag` and the value `winter`.
 
-  > | ANSWER HERE |
+  > | http://example.com/path/to/resource?tag=winter |
 
 10. What is a ***virtual property***?
 
-  > | ANSWER HERE |
+  > | It implements a property or variable that can be overridden by its subclasses. |
