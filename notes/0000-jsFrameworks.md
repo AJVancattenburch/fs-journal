@@ -461,3 +461,408 @@
   + 
   + 
   + 
+
+
+  # **Lists**
+* ## <u>STEPS (Day 2)</u> ## 
+  + FOR TODAY - THE EXAMPLE THAT WILL BE REFERENCED FOR YOUR API 'NAME' WILL BE THE BANANA WORD 'OBJECT'
+  + Run bcw create
+  + No auth today
+  + Build out AxiosService.js with your "export const objectAPI" attributes. Include your baseURL, timeout of 8000, and Params for your api_key: '' and and its api request params
+
+    ## <u>Example of JS script syntax for AxiosService params:</u> ##
+    ```js
+    params:
+    {
+    api_key: 'e098eyrwg098ewfy098yn0ser98y',
+    includes_adult: false,
+    }
+    ```
+
+  + In your HomePage.vue, set up a function request your API with the "onMounted" function like so:
+  ## <u>Example of JS script syntax for your onMounted function:</u> ##
+    ```js
+    import { computed, onMounted } from 'vue';
+    import { logger } from '../utils/Logger.js';
+    import { objectsService } from '../services/ObjectsService.js'
+    import Pop from '../utils/Pop.js';
+    import { AppState } from '../AppState.js';
+    import ObjectCard from '../components/ObjectCard.vue';
+
+    export default (await import('vue')).defineComponent({
+      setup() {
+        async function getObjects() {
+          try {
+            await objectsServices.getObjects()
+            logger.log ('[GETTING OBJECTS]')
+          } catch (error) {
+            logger.error (error)
+            Pop.toast ('[COULD NOT GET OBJECTS...]', error.message)
+          }
+        }
+        //NOTE - OnMounted says "run this code as soon as this component mounts"
+        onMounted(() => {
+            getObjects()
+        })
+
+        return {
+            placeholderImg: 'http://thiscatdoesnotexist.com',
+            // NOTE computed's almost always go on pages and 'parent components'.
+            // NOTE computed's are also how we talk to the AppState to bring in data from the AppState.
+            objectsInAppState: computed(() => AppState.objects)
+        };
+      }
+    })
+    ```
+
+  + Build out your **objectsService** so your **getObjects()** function has some data to log and render that you just built in your **ObjectPage.vue**
+  
+  ## <u>Example of JS syntax for building your initial 'getter' within Service Layer:</u> ##
+  ```js
+  import { AppState } from "../AppState.js"
+  import { Object } from "../models/Object.js"
+  import { logger } from "../utils/Logger.js"
+  import { api } from "./AxiosService.js"
+
+  class ObjectsService {
+
+      async getObjects() {
+          const res = await api.get('api/objects')
+          logger.log('[GETTING OBJECTS]', res.data)
+          //NOTE - IMPORTANT!!! >>>PAY ATTENTION to where you get the response back from the API. Ocassionally, you'll have to go deeper than 'res.data' (e.g. res.data.map) in order to breach past the 'res.data is not a function' error. It can typically be solved by reaching one layer deeper in the URL path like; for example, '.results'
+          AppState.objects = res.data.results.map(o => new Object(o))
+          // NOTE the bottom reference is for switching the 'currentPage'
+          AppState.currentPage = res.data.page
+          logger.log(AppState.objects)
+      }
+  }
+
+  export const objectsService = new ObjectsService()
+
+  ```
+  + **In the Model Layer,** the adapter pattern allows you to 'massage' your query into looking like something else like so:
+
+  ## <u>Example of JS syntax for building a Model Layer for banana object named "Object.js":</u> ##
+  ```js
+  import { Profile } from "./Account.js"
+
+  export class House {
+      constructor(data) {
+        this. = data.
+        this. = data.
+        this. = data.
+        this. = data.
+        this. = data.
+        this. = data.
+      }
+  }
+  ```
+
+  + After building out your model, **save an instance of it to your AppState**
+  + 
+  + Build out your template in your HomePage.vue
+
+  ## <u>Example of HTML syntax for building a template with a Modal:</u> ##
+  ```html
+  <template>
+    <div class="container-fluid">
+
+      <section class="row p-3 justify-content-end">
+          <button class="col-3 btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-object">
+            Create Object 📦
+          </button>
+      </section>
+      <!-- ANCHOR instead of  -->
+      <!-- NOTE v-for is iterating over the objects computed in the return...we aliased out each one as 'o' -->
+      <!-- NOTE for the v-for...vue requires a 'key' so have a unique identifier (typically the id of the object or 'objectId'). Operates in the SAME WAY AS A '.forEach()' -->
+      <section class="row">
+          <!-- NOTE when I want to pass data from a parent component to the child... we do that using props -->
+          <div class="col-md-3 my-3" v-for="o in objects" :key="object.id">
+              <!-- NOTE the below 'ObjectCard' essentially says "for all my objects, draw my ObjectCard Template" -->
+              <ObjectCard :objectProp="o" />
+          </div>
+          <button 
+          @click="deleteObject(objectProp?.id)" v-if="objectProp?.creator.id == account?.id" class="btn btn-danger" 
+          title="Delete Object"><i class="mdi mdi-delete"></i> </button>
+      </section>
+
+    </div>
+    <Modal id="create-object">
+      <ObjectForm/>
+    </Modal>
+  </template>
+  ```
+
+  + Build the **script tag** that pertains to the template you just created in your ObjectCard.vue
+
+  ## <u>Example of JS syntax for ObjectCard.vue script:</u> ##
+  ```js
+  <script>
+
+    import { computed } from 'vue';
+    import { Object } from '../models/Object.js';
+    import { AppState } from '../AppState.js';
+    import { logger } from '../utils/Logger.js';
+    import { objectsService } from '../services/ObjectsService.js';
+
+    export default {
+      props: {
+          objectProp: { type: Object, required: true }
+      },
+      setup() {
+
+          return {
+
+              async deleteJob(objectId) {
+                  try {
+                      await objectsService.deleteJob(objectId)
+                  } catch (error) {
+                      logger.error(error)
+                      Pop.toast(error.message, 'error')
+                  }
+              },
+
+              account: computed(() => AppState.account)
+          };
+      },
+    };
+
+  </script>
+  ```
+
+  + Build out your ObjectDetailsPage.vue **AFTER** adding the necessary path in your **router.js** file.
+
+  ## <u>Example of build setup for ObjectDetailsPage.vue (HTML Template tag + JS Script tag):</u> ##
+  ```html
+  <template>
+    <div class="container-fluid">
+        <section class="row justify-content-center">
+
+            <div class="col-8">
+                <ObjectCard :objectProp="activeObject" />
+                <h1>{{ activeObject?.price }}</h1>
+                <h2>{{ activeObject?.description }}</h2>
+                <h3 class="text-center mt-2">Image URL: <u style="color: darkblue;" role="button">{{ activeObject?.imgUrl }}</u></h3>
+            </div>
+
+        </section>
+    </div>
+  </template>
+  ```
+
+  ```js
+  <script>
+    import { computed, onMounted } from 'vue';
+    import { useRoute, useRouter } from 'vue-router';
+    import Pop from '../utils/Pop.js';
+    import { logger } from '../utils/Logger.js';
+    import { objectsService } from '../services/ObjectsService.js';
+    import { AppState } from '../AppState.js';
+    import ObjectCard from '../components/ObjectCard.vue';
+    export default {
+      setup() {
+          const route = useRoute(); // NOTE: gives me access to the current route or URL I am on
+          const router = useRouter(); // NOTE gives me access to the entire VUE router (this router.js here)
+          async function getObjectById() {
+              try {
+                  // NOTE grab the objectId from the route parameters
+                  const objectId = route.params.objectId;
+                  await objectsService.getObjectById(objectId);
+              }
+              catch (error) {
+                  Pop.error(error.message);
+                  logger.log(error);
+              }
+          }
+          onMounted(() => {
+              getObjectById();
+          });
+          return {
+              activeObject: computed(() => AppState.activeObject)
+          };
+      },
+      components: { ObjectCard }
+    };
+  </script>
+  ```
+  + Build out your **Service Layer** for your **ObjectDetailsPage.vue** function **getObjectById()**
+  + If you get a **404 error here,** it is likely you **aren't 'getting'** or **'hitting'** the **correct endpoint** in your **URL path.** Check your **.get(`objects/${objectId}`)** syntax in your **getObjectById(objectId)** within your *ObjectsService Layer.*
+  + You can bind a style for a background image with the following syntax if done with an inline-styling technique.
+
+  ## <u>Example using ***inline-styling:***</u> ##
+  ```html
+  <div class="container-fluid" :style="{ backgroundImage: `url(${object?.backdropImg})`}" >
+  ```
+
+  ## Example (Adding a Search Bar): ##
+
+  ```html
+  <template>
+    <div class="container-fluid">
+      <div class="row justify-content-center pt-5">
+      </div>
+    </div>
+    <form @submit-"searchObject()">
+      <input class="w-100" type="text" placeholder="Search..." />
+      <button type="submit" class="btn btn-success">
+        Search
+      </button>
+    </form>
+  </template>
+  ```
+
+  ```js
+  <script>
+    import {  } from ''
+    import {  } from ''
+    import Pop from ''
+    export default (await import('vue')).defineComponent({
+      setup() {
+        const search = ref('')
+        return{
+          search,
+
+          async searchObject() {
+            try {
+              const searchTerm = search.value
+              logger.log ('[SEARCHING FOR OBJECT]')
+              await objectsServices.searchObject()
+            } CATCH (error) {
+              logger.error (error)
+              Pop.toast (error.message, '[COULD NOT PERFORM OBJECT SEARCH...]')
+            }
+          }
+        };
+      }
+    })
+  </script>
+  ```
+
+  ## <u>Example using **queries** *in the AppState* for your searchbar:</u> ##
+  ```js
+  async searchObjects(query) {
+    // NOTE In axios we format queries as objects so they read as key:value pairs
+    const res = await objectApi.get('search/object', { 
+      params: {
+        // NOTE for searching an API, use keyword 'query' and assign the value of whatever the 'search' is
+        query: searchTerm,
+        api_key: '3498ry345908y3rf0938yef345',
+        includes_adult: false,
+      } 
+    })
+    AppState.query = searchTerm
+    logger.log('[SEARCHING FOR OBJECTS]')
+    AppState.objects = res.data.results.map(o=> new Object(o))
+  }
+  ```
+
+  + To create multiple pages in order to break down page space, you can adust your getObjects() async function within your service layer with the bottom line of code: ```AppState.currentPage = res.data.results``` and then set a **currentPage** and **totalPage** value in your AppState with appropriate parameters of 'null'.
+  + You then add the async function to **change the page in your HomePage.vue file.** ***BE SURE TO ADD AN @CLICK TO YOUR TEMPLATE IN THE APPROPRIATE BUTTON*** like in the **example provided below**:
+  ```js
+  async changePage(pageChangeSwitch) {
+    try {
+      if ( pageChangeSwitch == 'next' ) {
+        AppState.currentPage++
+      } else if ( pageChangeSwitch == 'previous' )
+        AppState.currentPage--
+        logger.log ('[CHANGING PAGE]', AppState.currentPage)
+    } catch (error) {
+      logger.error (error)
+      Pop.toast (error.message, '[COULD NOT CHANGE PAGE...]')
+    }
+  }
+  ```
+
+  ## <u>Example of adding 'previous' and 'next' page buttons in your template:</u> ##
+  ```html
+  <button :disabled="currentPage == 1" @click="changePage('previous')">
+    Previous
+  </button>
+  <button :disabled="currentPage == 1" @click="changePage('next')">
+    Next
+  </button>
+  ```
+
+   ## <u>Example for changePage() async function in Service Layer:</u> ##
+  ```js
+  async changePage() {
+    const savedQuery = AppState.savedQuery
+
+    if (!savedQuery) {
+
+    const res = await objectApi.get('discover/object?page=${AppState.currentPage}')
+
+    } else {
+
+      const res = await objectApi.get('search/object') { 
+
+        params: {
+          // NOTE for searching an API, use keyword 'query' and assign the value of whatever the 'search' is
+          query: savedQuery,
+          page: AppState.currentPage,
+          api_key: '3498ry345908y3rf0938yef345',
+          includes_adult: false,
+        } 
+      }
+    }
+
+    logger.log ('[CHANGING PAGE]', res.data)
+    AppState.objects = res.data.results.map(o => new Object(o))
+  }
+  ```
+
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
+  + 
