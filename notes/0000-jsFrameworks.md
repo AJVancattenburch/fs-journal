@@ -463,7 +463,6 @@
   + 
 
 
-  # **Lists**
 * ## <u>STEPS (Day 2)</u> ## 
   + FOR TODAY - THE EXAMPLE THAT WILL BE REFERENCED FOR YOUR API 'NAME' WILL BE THE BANANA WORD 'OBJECT'
   + Run bcw create
@@ -811,18 +810,33 @@
   }
   ```
 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
+* ## <u>STEPS (Day 3)</u> ## 
+
+  + ***HINT:*** In your router.js - if you type the following as an argument for your 'beforeEnter' path component, it will redirect the user to '/examplepage' beforeEnter(to, from, next) then on the next line write if(AppState.account?.id) and then invoke return next('/examplepage') on the following line
+  + To have a user's cover image appear on their profile, add the following computed in your AccountPage.vue:
+  ```js
+    coverImg: computed() => `url(${AppState.account?.coverImg})`
+  ```
+  + After that, **rebind your cover image with CSS** with background-image: v-bind(coverImg)
+  + ***HINT:*** 
+  + Example of someone's account page and it's form to change account settings:
+  ```html
+
+  ```
+  + Build account card in AccountPage.vue
+  + Build out your form in your created .vue of AccountForm.vue
+  + **Test form by adding {{ editable }} in your form template view**
+  + Now you can go back in your ExampleForm.vue and use a watchEffect to change the value of your editable is and let vue Magic 🪄 handle the rest...
+
+    ```js
+    watchEffect(() => {
+      editable.value = { ...AppState.account }
+    })
+    ```
+
+  + The **spread operator** pushes things into a new object (syntax is ...)
+  + When routing to another page, wrap your **desired tags to be placed in your other page** with a **router-link tag.**
+  + After you establish your wrapped **router-link,** create your new .vue page for it to be directed to(HINT: PROFILE PAGE)
   + 
   + 
   + 

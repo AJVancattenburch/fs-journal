@@ -2,5 +2,5 @@
 
 * **[vue_playground](https://github.com/AJVancattenburch/vue-playground)**
 * **[gregslistVue](https://github.com/AJVancattenburch/gregslistVue)**
-* **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
-* **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
+* **[gifted_re-vue](https://github.com/AJVancattenburch/gifted_re-vue)**
+* **[mindBloggle](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
