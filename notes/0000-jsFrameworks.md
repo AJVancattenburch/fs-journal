@@ -842,13 +842,14 @@
   + 
   + 
   + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
+* ## <u>CHECKPOINT FIRESIDE NOTES (Day 3)</u> ## 
+  + To go to previous or next pages:
+  + Make buttons for previous and next page
+  + Write an async function under your page.vue tab - and then under your "return" alongside your computeds that are being imported from the AppState
+  + Place the values for previous and next page into your AppState.
+  + Write "@click" functions for your buttons that are used to navigate to previous/next page buttons
+  + After writing your async in your page.vue, write it in your service layer with a parameter to be passed of "url"
+  + Add the property "disabled" <b>IF</b> the previous URL is null. This ensures that you <b>CANNOT go back beyond page one, or forward beyond the last page to be displayed</b>
   + 
   + 
   + 
