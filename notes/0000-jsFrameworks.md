@@ -850,25 +850,24 @@
   + Write "@click" functions for your buttons that are used to navigate to previous/next page buttons
   + After writing your async in your page.vue, write it in your service layer with a parameter to be passed of "url"
   + Add the property "disabled" <b>IF</b> the previous URL is null. This ensures that you <b>CANNOT go back beyond page one, or forward beyond the last page to be displayed</b>
+
+  * ## <u>CHECKPOINT FIRESIDE NOTES (Day 4)</u> ## 
+
+  + **LIKING POSTS**
+  + We use a **post request**
+  + Provide ID for post you want to like, and hit endpoint
+  + For "example" api/posts/:id/like
+  + Send the same request to *"unlike"* something
+  + 
+  + **REMEMBER: POSTS <u>DO NOT NEED</u> TO HAVE THE CAPABILITY OF BEING EDITED!!!**
+  + **REMEMBER: FILLING IN THE HEART IS NOT REQUIRED**
   + 
   + 
   + 
   + 
   + 
   + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
+  + **PAGE SWITCHING**
   + 
   + 
   + 
