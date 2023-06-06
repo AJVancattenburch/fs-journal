@@ -1673,9 +1673,9 @@ async findAlbumCollaborators(req, res, next) {
   <div v-for="c in myCollabs" :key="c.id"
   <AlbumCard :album="c.album" 
 
-  + 
+**<h2>KEEP IN MIND: YOUR CHECKPOINT #7 FOR THIS WEEK { TOWER } NEEDS <u>TWO AUTH TOKENS</u> TO START</h2>**
   
-  + 
+  + **GOOD LUCK YOU GUYS! YOU'VE GOT THIS!!**
   
   + 
   
