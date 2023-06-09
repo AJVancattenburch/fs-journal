@@ -1,37 +1,28 @@
 # Managing the Fullstack Application
 
-1. Describe the two ways to bind Data in Vue?
+Describe the two ways to bind Data in Vue?
+`One-way` binding and `two-way` binding.
 
-  > | ANSWER HERE |
+The `SPA` acronym stands for what?
+`Single-Page Application`
 
-2. The `SPA` acronym stands for what?
+What are some of the advantages/uses of a `SPA` over a traditional one?
+Enhanced user experience and performance, code reusability.
 
-  > | ANSWER HERE |
+What does the `onMounted` method in Vue do?
+Executes code when a component is mounted.
 
-3. What are some of the advantages/uses of a `SPA` over a traditional one?
+What is the `v-model` attribute in Vue for, and when might you use it?
+Used for `two-way data binding` with form input elements.
 
-  > | ANSWER HERE |
+What is the `package.json` file used for?
+Used to manage project metadata in a Node.js project.
 
-4. What does the `onMounted` method in Vue do?
+Which Vue attributes(directives) could you use to conditionally render elements on a page?
+`v-if` and `v-show`.
 
-  > | ANSWER HERE |
+What is the purpose of the `key` attribute when using `v-for` on an element?
+To uniquely identify elements in a list during rendering.
 
-5. What is the `v-model` attribute in Vue for, and when might you use it?
-
-  > | ANSWER HERE |
-
-6. What is the package.json file used for?
-
-  > | ANSWER HERE |
-
-7. Which Vue attributes(directives) could you use to conditionally render elements on a page?
-
-  > | ANSWER HERE |
-
-8. What is the purpose of the `key` attribute when using `v-for` on an element?
-
-  > | ANSWER HERE |
-
-9. What is the `<slot>` element and what is it used for?
-
-  > | ANSWER HERE |
+What is the `<slot>` element and what is it used for?
+The `<slot>` element is used for content distribution in Vue components, allowing the component to accept and render content from its parent component.
