@@ -1,5 +1,5 @@
 ## Afternoon Assignment Links
 
-* **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
+* **[lizardRoundUp](https://github.com/AJVancattenburch/lizardRoundUp)**
 * **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
 * **[Repo](https://github.com/AJVancattenburch/<ASSIGNMENT_REPO>)**
