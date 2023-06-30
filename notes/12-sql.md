@@ -347,20 +347,243 @@
   services.AddScoped<AlbumsService>();
   services.AddScoped<AlbumsRepository>();
   ```
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
-  + 
+
+## **Day 2**
+
+### *Rebuilding Post-It - Pictures*
+
+* Steps
+  + Make sure you are connected to your database by running your `dbSetup.sql file`
+  + You should see a notification at the bottom of your activity bar in vscode
+  + Create your `pictures` table in your `dbSetup.sql file`
+  + Example:
+  ```sql
+  CREATE TABLE IF NOT EXISTS pictures (
+    Id SERIAL PRIMARY KEY COMMENT 'Primary Key',
+    imgUrl VARCHAR(500) NOT NULL,
+    CreatorId VARCHAR(255) NOT NULL,
+    albumId INT NOT NULL,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time created',
+    UpdatedAt DATETIME DEFAULT ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last updated time',
+
+    FOREIGN KEY (AlbumId) REFERENCES albums(id) ON DELETE CASCADE,
+    FOREIGN KEY (CreatorId) REFERENCES accounts(id) ON DELETE CASCADE
+  ) default charset utf8 COMMENT '';
+  ```
+
+  + Now you can continue on to creating your model for your pictures table.
+  + Example:
+  ```cs
+  namespace PostItSharp.Models;
+
+  public class Picture
+  {
+    public int Id { get; set; }
+    public string ImgUrl { get; set; }
+    public string CreatorId { get; set; }
+    public int AlbumId { get; set; }
+    public Account Creator { get; set;}
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+  }
+  ```
+
+  + This time we will create our repository first for `pictures` then work our way into the `controller` and `service` layer.
+  + Building the repository for `pictures`
+  + Example:
+  ```cs
+  namespace PostItSharp.Repositories;
+
+  public class PicturesRepository
+  {
+    private readonly PicturesRepository _repo;
+
+    public PicturesRepository(PicturesRepository repo)
+    {
+      _repo = repo;
+    }
+  }
+
+  ```
+
+  + Building the `service layer` for `pictures`
+  + Example:
+  ```cs
+  namespace postitsharp.Services;
+
+  public class PicturesService
+  {
+    private readonly PicturesRepository _repo;
+
+    public PicturesService(PicturesRepository repo)
+    {
+      _repo = repo;
+    }
+  } 
+  ```
+
+  + Now you can create your first `post` method starting in your controller.
+  + Example:
+  ```cs
+  namespace PostItSharp.Controllers;
+
+  [ApiController]
+  [Route("api/[controller]")]
+
+  public class PicturesController : ControllerBase
+  {
+    private readonly PicturesService _picturesService;
+
+    private readonly Auth0Provider _auth;
+
+    public PicturesController(PicturesService picturesService)
+    {
+      _picturesService = picturesService;
+    }
+
+    [HttpPost]
+    [Authorize]
+
+    public async Task<ActionResult<Picture>> CreatePicture([FromBody] Picture pictureData)
+    {
+      try
+      {
+        Account userInfo = await _auth.GetUserInfoAsync<Account>(HttpContext);
+        pictureData.CreatorId = userInfo.Id;
+        Picture picture = _picturesService.CreatePicture(pictureData);
+        return Ok(picture);
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
+  }
+  ```
+
+  + How move onto your `pictures repository layer` to continue building out your post request.
+  + Example:
+  ```cs
+    internal Picture CreatePicture(Picture pictureData)
+    {
+      string sql = @"
+      INSERT INTO pictures
+        (imgUrl, creatorId, albumId)
+      VALUES
+        (@imgUrl, @creatorId, @albumId);
+      SELECT
+        pic.*,
+        acc.*
+      FROM pictures
+      JOIN accounts acc ON acc.id = pic.creatorId
+      WHERE pic.id = LAST_INSERT_ID();
+      ";
+      Picture picture = _db.Query<Picture, Account, Picture>(sql, (picture, account) =>
+      {
+        picture.Creator = account;
+        return picture;
+      }, pictureData).FirstOrDefault();
+      return picture;
+    }
+  ```
+
+  + Be sure you add your `service and repo` to your `startup.cs file`
+  + Example:
+  ```cs
+  services.AddScoped<PicturesService>();
+  services.AddScoped<PicturesRepository>();
+  ```
+
+  + Now you can `test your post request in postman` to make sure everything is working properly.
+  + After that step, note that you do not need to build a function through your `service and repo` for your `get all pictures` method. You only need to grab the `id` of the `album` you are trying to get the pictures for in your album controller and service.
+  + Example:
+  ```cs
+  [HttpGet("{albumId}/pictures")]
+
+  public ActionResult<List<Picture>> GetPicturesByAlbumId(int albumId)
+  {
+    try
+    {
+      List<Picture> pictures = _picturesService.GetPicturesByAlbumId(albumId);
+      return Ok(pictures);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  ```
+  + Next, you can build out your `get pictures by album id` method in your `pictures service layer`
+  + Example:
+  ```cs
+  internal List<Picture> GetPicturesByAlbumId(int albumId)
+  {
+    string sql = @"
+    SELECT
+      pic.*,
+      acc.*
+    FROM pictures pic
+    JOIN accounts acc ON acc.id = pic.creatorId
+    WHERE pic.albumId = @albumId;
+    ";
+    return _db.Query<Picture, Account, Picture>(sql, (picture, account) =>
+    {
+      picture.Creator = account;
+      return picture;
+    }, new { albumId }, splitOn: "id").ToList();
+  }
+  ```
+  + Now you can `test your get request in postman` to make sure everything is working properly.
+
+  + Once you're passing the test, you can build out your delete method in your `pictures controller`
+  + Example:
+  ```cs
+  [HttpDelete("{pictureId}")]
+  [Authorize]
+
+  public async Task<ActionResult<Picture>> DeletePicture(int pictureId)
+  {
+    try
+    {
+      Account userInfo = await _auth.GetUserInfoAsync<Account>(HttpContext);
+      _picturesService.DeletePicture(pictureId, userInfo.Id);
+      return Ok("Picture Deleted!");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  ```
+
+  + Now you can build out your `delete picture` method in your `pictures service layer`
+  + Example:
+  ```cs
+  internal void DeletePicture(int pictureId, string userId)
+  {
+    Picture picture = GetById(pictureId);
+    if (picture.CreatorId != userId)
+    {
+      throw new Exception("This is not your picture!");
+    }
+    string sql = "DELETE FROM pictures WHERE id = @pictureId LIMIT 1;";
+    _db.Execute(sql, new { pictureId });
+  }
+  ```
+
+  + Finally, you can build your delete method in your `pictures repository layer`
+  + Example:
+  ```cs
+  internal void DeletePicture(int pictureId)
+  {
+    string sql = @"
+    DELETE FROM pictures
+    WHERE id = @pictureId LIMIT 1
+    ;";
+    int rows = _db.Execute(sql, new { pictureId });
+  }
+  ```
+
   + 
   + 
   + 
