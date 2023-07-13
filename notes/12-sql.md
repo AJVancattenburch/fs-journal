@@ -583,8 +583,8 @@
     int rows = _db.Execute(sql, new { pictureId });
   }
   ```
-
-  + 
+* ***HOW TO USE MYSQL WORKBENCH***
+  + D
   + 
   + 
   + 
