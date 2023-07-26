@@ -18,5 +18,12 @@
     "titleBar.inactiveBackground": "#9b49e8",
     "titleBar.inactiveForeground": "#612e90",
   },
-  "peacock.color": "#9b49e8"
+  "peacock.color": "#9b49e8",
+  "cSpell.words": [
+    "aspnet",
+    "certbot",
+    "certonly",
+    "respin",
+    "WORKDIR"
+  ]
 }
